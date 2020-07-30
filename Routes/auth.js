@@ -4,7 +4,7 @@ const router = express.Router()
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 const passport = require('passport')
-const User = require('../Models/User')
+const User = require('../lib/models/User')
 
 router.post('/register', (req, res) => {
     User.findOne({ email: req.body.email })
