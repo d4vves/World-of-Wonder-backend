@@ -13,4 +13,4 @@ const ArtifactSchema = new Schema({
     }
 })
 
-module.exports = Artifact = mongoose.model('artifact', ArtifactSchema)
+module.exports = mongoose.model('Artifact', ArtifactSchema)
