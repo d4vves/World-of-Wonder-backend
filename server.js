@@ -24,8 +24,7 @@ app.use(bodyParser.json())
 
 app.use(cors({
   origin: process.env.CLIENT_URL,
-  optionsSuccessStatus: 200,
-  allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Origin"
+  optionsSuccessStatus: 200
 }))
 
 app.get('/', (req, res) => {
