@@ -22,6 +22,11 @@ mongoose.connect(uri).then((() => console.log('MONGOOSE CONNECTED'))).catch(erro
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
+app.use(cors({
+  origin: process.env.CLIENT_URL,
+  optionsSuccessStatus: 200,
+}))
+
 app.get('/', (req, res) => {
   res.send('Welcome to our office!')
 })
