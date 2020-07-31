@@ -25,7 +25,7 @@ router.post('/register', (req, res) => {
                     newUser.password = hash
                     newUser.save()
                     // TODO delete .json(user)
-                    .then(user => res.status(207).json(user))
+                    .then(user => res.status(207))
                     .catch(err => console.log(err))
                 })
             })

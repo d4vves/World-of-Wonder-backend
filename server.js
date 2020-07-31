@@ -8,14 +8,16 @@ const passport = require('passport')
 const app = express()
 const User = require("./lib/Models/User")
 
+
 const uri = process.env.MONGODB_URI
+
 
 const MongoClient = require('mongodb').MongoClient;
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
-  const collection = client.db("test").collection("devices");
+  const collection = client.db("test").collection("devices")
   // perform actions on the collection object
-  client.close();
+  client.close()
 });
 
 mongoose.connect(uri).then((() => console.log('MONGOOSE CONNECTED'))).catch(error => console.log(error))
