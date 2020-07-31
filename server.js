@@ -6,11 +6,9 @@ const cors = require('cors')
 const passport = require('passport')
 
 const app = express()
-const User = require("./lib/models/User")
+const User = require("./lib/Models/User")
 
 const uri = process.env.MONGOD_URI
-
-// const db = 'mongodb://localhost:27017/worldofwonder'
 
 // Connect to db
 const MongoClient = require('mongodb').MongoClient;
