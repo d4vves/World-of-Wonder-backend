@@ -8,9 +8,8 @@ const passport = require('passport')
 const app = express()
 const User = require("./lib/Models/User")
 
-const uri = process.env.MONGOD_URI
+const uri = process.env.MONGODB_URI
 
-// Connect to db
 const MongoClient = require('mongodb').MongoClient;
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
