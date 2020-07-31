@@ -24,8 +24,6 @@ app.use(bodyParser.json())
 
 app.use(cors({
   origin: process.env.CLIENT_URL,
-  methods: 'POST, GET, OPTIONS, PUT, DELETE',
-  allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
   optionsSuccessStatus: 200
 }))
 
