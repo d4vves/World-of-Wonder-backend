@@ -6,11 +6,12 @@ const cors = require('cors')
 const passport = require('passport')
 
 const app = express()
+const User = require("./lib/Models/User")
 
-const uri = process.env.MONGOD_URI
+const uri = process.env.MONGODB_URI
 
-const MongoClient = require('mongodb').MongoClient
-const client = new MongoClient(uri, { useNewUrlParser: true })
+const MongoClient = require('mongodb').MongoClient;
+const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
   const collection = client.db("test").collection("devices")
   // perform actions on the collection object
