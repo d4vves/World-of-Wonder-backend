@@ -8,8 +8,11 @@ router.get('/', (req, res) => {
     User.findById(req.user._doc._id)
     .populate('artifacts')
     .exec((err, user) => {
+        console.log(user)
+        console.log(err)
         res.json(user.artifacts)
     })
+
 })
 
 router.get('/artifact/:id', (req, res) => {
