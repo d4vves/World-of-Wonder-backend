@@ -6,7 +6,7 @@ const Artifact = require('../lib/Models/Artifact')
 
 router.get('/', (req, res) => {
     User.findById(req.user._doc._id)
-    .populate('Artifacts')
+    .populate('artifacts')
     .exec((err, user) => {
         res.json(user.artifacts)
     })
