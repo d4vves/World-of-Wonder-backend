@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const User = require('../lib/models/User')
-const Artifact = require('../lib/models/Artifact')
+const User = require('../lib/Models/User')
+const Artifact = require('../lib/Models/Artifact')
 
 router.get('/', (req, res) => {
     User.findById(req.user._doc._id)
